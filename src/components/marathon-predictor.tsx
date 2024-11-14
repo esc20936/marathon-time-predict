@@ -65,6 +65,8 @@ export default function MarathonPredictor() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    if (mutation.isPending) return;
+    
     mutation.mutate(values);
   }
 
