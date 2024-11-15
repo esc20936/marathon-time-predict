@@ -41,11 +41,11 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 7%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
@@ -74,5 +74,42 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+
+.colorText {
+  background: linear-gradient(
+    90deg,
+    rgb(27, 84, 255) 0%,
+    rgba(126, 157, 255, 1) 33%,
+    rgba(239, 100, 255, 1) 50%,
+    rgba(126, 157, 255, 1) 67%,
+    rgb(38, 92, 255) 100%
+  );
+
+  background-size: 300%;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-weight: 900;
+	font-size: 5vw; */
+  /* letter-spacing: -5px; */
+  /* text-transform: uppercase; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 4s ease-in-out infinite;
+  -moz-animation: animated_text 4s ease-in-out infinite;
+  -webkit-animation: animated_text 4s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
   }
 }
