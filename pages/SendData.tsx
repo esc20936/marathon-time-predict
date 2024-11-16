@@ -66,6 +66,7 @@ export default function SendData() {
 
   const mutation = useMutation({
     mutationFn: sendTrainingData,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSuccess: (_) => {
       setPrediction("Se envió su data correctamente");
     },
@@ -76,9 +77,9 @@ export default function SendData() {
     },
   });
 
-
   const mutation2 = useMutation({
     mutationFn: sendAdvancedTrainingData,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSuccess: (_) => {
       setPrediction("Se envió su data correctamente");
     },

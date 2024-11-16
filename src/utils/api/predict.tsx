@@ -1,7 +1,7 @@
-import { sendBody, sendAdvancedBody } from "../types/send";
+import { predictAdvancedBody, predictBody } from "../types/predict";
 import API from "./axios";
 
-export const sendTrainingData = async (trainingData: sendBody) => {
+export const sendTrainingData = async (trainingData: predictBody) => {
   try {
     const response = await API.post("model/predict", trainingData);
     return response.data;
@@ -11,7 +11,7 @@ export const sendTrainingData = async (trainingData: sendBody) => {
 };
 
 
-export const sendAdvancedTrainingData = async (trainingData: sendAdvancedBody) => {
+export const sendAdvancedTrainingData = async (trainingData: predictAdvancedBody) => {
   try {
     const response = await API.post("model/predict2", trainingData);
     return response.data;
